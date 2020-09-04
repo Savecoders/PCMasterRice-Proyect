@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,900');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #feffff;
+	font-family: 'Raleway', sans-serif;
+}
+
+*::selection {
+	outline: none;
+}
+
+/*MENU*/
+.nav {
+	text-align: right;
+	height: 70px;
+	line-height: 70px;
+	position: relative;
+	z-index: 999;
+}
+
+.menu {
+	margin: 0 30px 0 0;
+}
+
+.menu a {
+	clear: right;
+	text-decoration: none;
+	color: #feffff;
+	margin: 0 10px;
+	line-height: 70px;
+	letter-spacing: 0.9px;
+	text-transform: uppercase;
+	transition: all 250ms ease;
+}
+
+@keyframes strike {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.strike {
+	position: relative;
+}
+
+.strike:hover:after {
+	content: ' ';
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #feffff;
+	animation-name: strike;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+.menu h5 {
+	margin: 0 30px;
+	text-transform: uppercase;
+	float: left;
+	font-weight: 300;
+	font-size: 25px;
+	letter-spacing: 2px;
+	position: relative;
+	z-index: 999;
+	color: #feffff;
+}
+
+label {
+	margin: 0 20px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: right;
+	color: #354757;
+}
+
+#toggle {
+	display: none;
+}
+
+.fixed {
+	background-color: #feffff;
+}
+
+.content {
+	width: 100%;
+	min-height: 800px;
+	position: relative;
+	z-index: 1;
+}
+
+.content:before {
+	content: '';
+	width: 50%;
+	height: 110px;
+	position: absolute;
+	top: -48px;
+	left: 0;
+	background-color: #feffff;
+	transform: skewY(5.5deg); /*8*/
+}
+
+.content:after {
+	content: '';
+	width: 50%;
+	height: 110px;
+	position: absolute;
+	top: -48px;
+	right: 0;
+	background-color: #feffff;
+	transform: skewY(-5.5deg); /*8*/
+}
+
+.grand-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 999;
+	width: 60%;
+	min-height: 100px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.grand-title h4 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+	margin: 30px;
+	color: #354757;
+}
+
+.grand-title h4:after {
+	content: '';
+	display: block;
+	width: 5%;
+	height: 3px;
+	margin: 25px auto;
+	border: 0;
+	background: #e58859;
+}
+
+.text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: -10px;
+	position: relative;
+	z-index: 999;
+}
+
+.inner-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	padding: 20px;
+	width: 300px;
+	margin: 10px 0 10px 0;
+	transition: all 450ms ease;
+}
+
+.inner-text:hover {
+	cursor: pointer;
+	box-shadow: -1px 6.5px 15px rgba(208, 211, 214, 0.75);
+}
+
+.ic {
+	font-size: 35px;
+	color: #eba675;
+	transition: all 250ms ease;
+}
+
+.ic:hover {
+	opacity: 0.7;
+}
+
+.inner-text h3 {
+	color: #299fff;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+}
+
+.inner-text h5 {
+	color: #6d85a8;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+}
+
+.inner-text p {
+	color: #6d85a8;
+}
+
+.inner-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 450px;
+}
+
+.boxy:nth-child(1) {
+	width: 40%;
+	min-height: 400px;
+	background: url('https://www.gamingscan.com/wp-content/uploads/2020/04/best-gaming-setups.jpg')
+		bottom no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 999;
+}
+
+.boxy:nth-child(2) {
+	width: 50%;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+}
+
+#slider {
+	overflow: hidden;
+	margin-left: -20px;
+}
+
+#slider figure ul li {
+	width: 20%;
+	float: left;
+	list-style: none;
+	text-align: center;
+}
+
+ul li img {
+	border-radius: 50%;
+	padding: 10px;
+}
+
+ul li h4 {
+	color: #354757;
+	font-weight: 300;
+	font-size: 25px;
+}
+
+ul li p {
+	font-size: 20px;
+	width: 80%;
+	margin: 0 auto;
+	color: #6d85a8;
+}
+
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	text-align: left;
+	animation-name: slider;
+	animation-duration: 25s;
+	animation-timing-function: linear;
+	animation-delay: -20s;
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
+}
+
+@media screen and (max-width: 950px) {
+	.photo p {
+		width: 90%;
+	}
+	.grand-title {
+		width: 90%;
+	}
+	.text {
+		flex-direction: column;
+	}
+	.inner-content {
+		flex-flow: column wrap;
+	}
+	.boxy:nth-child(1),
+	.boxy:nth-child(2) {
+		width: 90%;
+	} /*GENERA PROBLEMA*/
+	.boxy:nth-child(1) {
+		padding: 10px;
+	}
+	#slider {
+		margin-left: -55px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	label {
+		display: block;
+		cursor: pointer;
+	}
+	.menu {
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+	.menu a {
+		display: block;
+		border-bottom: 1px solid #eaeaeb;
+		margin: 0;
+		color: #6d85a8;
+	}
+	#toggle:checked + .menu {
+		display: block;
+		background-color: #feffff;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#slider {
+		margin-left: -55px;
+	}
+	.photo-text h4 {
+		font-size: 45px;
+	}
+	.inner-text {
+		width: 80%;
+	}
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+		opacity: 0;
+	}
+	20% {
+		left: 0;
+		opacity: 1;
+	}
+	25% {
+		left: -100%;
+		opacity: 0.8;
+	}
+	45% {
+		left: -100%;
+		opacity: 0.8;
+	}
+	50% {
+		left: -200%;
+		opacity: 0.7;
+	}
+	70% {
+		left: -200%;
+		opacity: 0.7;
+	}
+	75% {
+		left: -300%;
+		opacity: 0.6;
+	}
+	95% {
+		left: -400%;
+		opacity: 0.6;
+	}
+	100% {
+		left: -400%;
+		opacity: 1;
+	}
+}
